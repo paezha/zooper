@@ -1,0 +1,23 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is a document to track the uploading and cleaning of the raw dataset to be used in the `zooper` package. 
+
+Load the .csv file:
+```{r}
+
+library(here)
+
+zoop_data <- read.csv(here("data-raw", "zoop_data_raw_DO_NOT_EDIT.csv"))
+
+```
+
+Save to data folder:
+```{r}
+
+usethis::use_data(zoop_data, overwrite = TRUE)
+
+```
+
